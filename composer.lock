@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43a8a6e444590514bb4b9f6a02112d0f",
+    "content-hash": "4d54f4de5918cef592dce9a34db03844",
     "packages": [
         {
             "name": "brick/math",
@@ -361,6 +361,97 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "fshangala/auth2-ation",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "C:/Users/exsae/Documents/GitHub/auth2-ation",
+                "reference": "36c98b8532f24940f95a04289bb50483ea63a340"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fshangala\\Auth2Ation\\": "src/"
+                }
+            },
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Funduluka Shangala",
+                    "email": "fshangala@gmail.com"
+                }
+            ],
+            "description": "Authentication and authorization system for laravel and lumen",
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "fshangala/cws",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "C:/Users/exsae/Documents/GitHub/cws",
+                "reference": "0814466033410faec7664a87ba228672ec03f174"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fshangala\\Cws\\CwsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fshangala\\Cws\\": "src/"
+                }
+            },
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "fshangala",
+                    "email": "fshangala@gmail.com"
+                }
+            ],
+            "description": "A centralised wallet system to include in your project",
+            "transport-options": {
+                "relative": false
+            }
+        },
+        {
+            "name": "fshangala/inventory",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "C:/Users/exsae/Documents/GitHub/inventory",
+                "reference": "d364c40fbf6ff57d1a1a04863296850676f67094"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Fshangala\\Invetory\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Funduluka Shangala",
+                    "email": "fshangala@gmail.com"
+                }
+            ],
+            "description": "Inventory management system to include in a laravel application",
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "graham-campbell/result-type",
@@ -7087,7 +7178,11 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "fshangala/auth2-ation": 20,
+        "fshangala/cws": 20,
+        "fshangala/inventory": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

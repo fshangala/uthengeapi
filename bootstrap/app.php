@@ -23,9 +23,9 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-// $app->withFacades();
+$app->withFacades();
 
-// $app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -79,7 +79,12 @@ $app->configure('app');
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
-
+$app->middleware([
+    Fshangala\Auth2Ation\Http\Middleware\Errors::class,
+]);
+$app->routeMiddleware([
+    'auth' => Fshangala\Auth2Ation\Http\Middleware\Authenticate::class,
+]);
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -94,7 +99,9 @@ $app->configure('app');
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
-
+$app->register(Fshangala\Auth2Ation\Auth2AtionServiceProvider::class);
+$app->register(Fshangala\Auth2Ation\Auth\FAuthServiceProvider::class);
+$app->register(Fshangala\Inventory\InventoryServiceProvider::class);
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
